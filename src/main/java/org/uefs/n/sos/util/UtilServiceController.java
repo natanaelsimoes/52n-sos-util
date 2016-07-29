@@ -36,7 +36,8 @@ public class UtilServiceController {
     public String defaultOperation() {
         return "{"
                 + serviceInformation("timestamp", "Server clock", "Get actual date and time from server.") + ","
-                + serviceInformation("observation", "Send observation", "Post an observation.")
+                + serviceInformation("observation", "Send observation", "Post an observation.") + ","
+                + serviceInformation("sensor/insert", "Insert sensor", "Insert a sensor/station in the network")
                 + "}";
     }
 
@@ -64,10 +65,11 @@ public class UtilServiceController {
         return this.doRequest(xml);
     }
 
-    @RequestMapping(value = "/sensor/insert/{station}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE, method = RequestMethod.POST)
+    @RequestMapping(value = "/sensor/insert/{station}", produces = MediaType.APPLICATION_XML_VALUE, method = RequestMethod.POST)
     public String insertSensor(@PathVariable String station) {
         String xml = RequestModel.generateSensor(station, this.json);
-        return this.doRequest(xml);
+        return xml;
+        //return this.doRequest(xml);
     }
 
     private String doRequest(String xml) {

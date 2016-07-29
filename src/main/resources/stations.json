@@ -1,8 +1,8 @@
 {
-    "serviceURL": "http://192.168.0.106:8080/52n-sos-webapp/service",
+    "serviceURL": "http://192.168.100.2:8080/52n-sos-webapp/service",
     "station-uefs-uefs": {
         "name": "Estacao UEFS - UEFS",
-        "description": "Estação instalada nas dependências da UEFS",
+        "description": "Estacao instalada nas dependencias da UEFS",
         "center": {
             "lat": "-12.20681",
             "lng": "-38.96924"
