@@ -64,7 +64,7 @@ public class RequestModel {
                 + "                    <om:featureOfInterest>\n"
                 + "                        <sams:SF_SpatialSamplingFeature gml:id=\"" + station + "-ssf\">\n"
                 + "                            <gml:identifier codeSpace=\"\">" + station + "-feature</gml:identifier>\n"
-                + "                            <gml:name>UEFS Station</gml:name>\n"
+                + "                            <gml:name>" + stationName + "</gml:name>\n"
                 + "                            <sf:sampledFeature xlink:href=\"" + station + "-1\"/>\n"
                 + "                            <sams:shape>\n"
                 + "                                <gml:Point gml:id=\"" + station + "\">\n"
